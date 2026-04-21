@@ -153,4 +153,4 @@ Open → **http://localhost:5173**
 
 ---
 
-*Built by Nandha Kumar K for Tredence Studio Full Stack Engineering Internship 2025*
+*Built by Nandha Kumar K for Tredence Full Stack Engineering Internship 2025*
