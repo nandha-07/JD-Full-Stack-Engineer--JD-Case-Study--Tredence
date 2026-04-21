@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --node-start: #10b981;
+  --node-task: #3b82f6;
+  --node-approval: #f59e0b;
+  --node-auto: #8b5cf6;
+  --node-end: #ef4444;
+  --bg-dark: #0f1117;
+  --bg-panel: #1a1d27;
+  --bg-card: #1e2130;
+  --border: #2d3148;
+  --text-primary: #f0f2ff;
+  --text-secondary: #8b92b3;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* React Flow custom styles */
+.react-flow__node {
+  border-radius: 12px !important;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__controls {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: var(--bg-panel) !important;
+  border-color: var(--border) !important;
+  color: var(--text-secondary) !important;
+}
+
+.react-flow__controls-button:hover {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}
+
+.react-flow__minimap {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+.react-flow__background {
+  background: var(--bg-dark) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* Animations */
+@keyframes slide-in {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-slide-in { animation: slide-in 0.2s ease-out; }
+.animate-fade-in { animation: fade-in 0.2s ease-out; }
+.animate-slide-up { animation: slide-up 0.2s ease-out; }
+.animate-spin { animation: spin 1s linear infinite; }
+
+/* Handle styles */
+.react-flow__handle {
+  width: 10px !important;
+  height: 10px !important;
+  background: #374151 !important;
+  border: 2px solid #6b7280 !important;
+  transition: all 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
